@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* HEADER */
+
+.topo{
+    background-color: #111827;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+.topo nav{
+    display: flex;
+    gap: 20px;
+}
+
+.topo a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.topo a:hover{
+    color: #60a5fa;
+}
+
+/* BANNER */
+
+.banner{
+    background: linear-gradient(to right, #2563eb, #1e3a8a);
+
+    color: white;
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.banner h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* GRID DOS PRODUTOS */
+
+.produtos{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 40px;
+}
+
+/* CARD */
+
+.card{
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.conteudo-card{
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.conteudo-card h3{
+    color: #111827;
+}
+
+.conteudo-card p{
+    color: #444;
+    line-height: 1.5;
+}
+
+button{
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1e40af;
+}
+
+/* FOOTER */
+
+.rodape{
+    background-color: #111827;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 900px){
+
+    .produtos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .topo{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .produtos{
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2{
+        font-size: 28px;
+    }
+
+}
